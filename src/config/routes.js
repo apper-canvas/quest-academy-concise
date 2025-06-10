@@ -1,8 +1,8 @@
-import Home from '../pages/Home';
-import MathWorld from '../pages/MathWorld';
-import ReadingLand from '../pages/ReadingLand';
-import MyRewards from '../pages/MyRewards';
-import Settings from '../pages/Settings';
+import HomePage from '@/components/pages/HomePage';
+import MathWorldPage from '@/components/pages/MathWorldPage';
+import ReadingLandPage from '@/components/pages/ReadingLandPage';
+import MyRewardsPage from '@/components/pages/MyRewardsPage';
+import SettingsPage from '@/components/pages/SettingsPage';
 
 export const routes = {
   home: {
@@ -10,35 +10,35 @@ export const routes = {
     label: 'Home',
     path: '/',
     icon: 'Home',
-    component: Home
+component: HomePage
   },
   math: {
     id: 'math',
     label: 'Math World',
     path: '/math',
     icon: 'Calculator',
-    component: MathWorld
+component: MathWorldPage
   },
   reading: {
     id: 'reading',
     label: 'Reading Land',
     path: '/reading',
     icon: 'BookOpen',
-    component: ReadingLand
+component: ReadingLandPage
   },
   rewards: {
     id: 'rewards',
     label: 'My Rewards',
     path: '/rewards',
     icon: 'Trophy',
-    component: MyRewards
+component: MyRewardsPage
   },
   settings: {
     id: 'settings',
     label: 'Settings',
     path: '/settings',
     icon: 'Settings',
-    component: Settings
+component: SettingsPage
   }
 };
 

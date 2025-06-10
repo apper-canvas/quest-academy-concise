@@ -1,13 +1,13 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import Layout from './Layout';
-import Home from './pages/Home';
-import MathWorld from './pages/MathWorld';
-import ReadingLand from './pages/ReadingLand';
-import Lesson from './pages/Lesson';
-import MyRewards from './pages/MyRewards';
-import Settings from './pages/Settings';
-import NotFound from './pages/NotFound';
+import HomePage from '@/components/pages/HomePage';
+import MathWorldPage from '@/components/pages/MathWorldPage';
+import ReadingLandPage from '@/components/pages/ReadingLandPage';
+import LessonPage from '@/components/pages/LessonPage';
+import MyRewardsPage from '@/components/pages/MyRewardsPage';
+import SettingsPage from '@/components/pages/SettingsPage';
+import NotFoundPage from '@/components/pages/NotFoundPage';
 
 function App() {
   return (
@@ -15,13 +15,13 @@ function App() {
       <div className="min-h-screen bg-gray-50">
         <Routes>
           <Route path="/" element={<Layout />}>
-            <Route index element={<Home />} />
-            <Route path="math" element={<MathWorld />} />
-            <Route path="reading" element={<ReadingLand />} />
-            <Route path="lesson/:id" element={<Lesson />} />
-            <Route path="rewards" element={<MyRewards />} />
-            <Route path="settings" element={<Settings />} />
-            <Route path="*" element={<NotFound />} />
+<Route index element={<HomePage />} />
+            <Route path="math" element={<MathWorldPage />} />
+            <Route path="reading" element={<ReadingLandPage />} />
+            <Route path="lesson/:id" element={<LessonPage />} />
+            <Route path="rewards" element={<MyRewardsPage />} />
+            <Route path="settings" element={<SettingsPage />} />
+            <Route path="*" element={<NotFoundPage />} />
           </Route>
         </Routes>
         <ToastContainer

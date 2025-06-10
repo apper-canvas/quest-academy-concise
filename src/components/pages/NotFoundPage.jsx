@@ -1,17 +1,20 @@
+import React from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
-import ApperIcon from '../components/ApperIcon';
+import ApperIcon from '@/components/ApperIcon';
+import Button from '@/components/atoms/Button';
+import Card from '@/components/molecules/Card';
 
-export default function NotFound() {
+export default function NotFoundPage() {
   const navigate = useNavigate();
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-accent/20 via-white to-primary/10 flex items-center justify-center p-6">
-      <motion.div
+      <Card
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
-        className="text-center max-w-md"
+        className="text-center max-w-md p-8"
       >
         <motion.div
           animate={{ rotate: [0, 10, -10, 0] }}
@@ -28,25 +31,25 @@ export default function NotFound() {
         </p>
         
         <div className="space-y-4">
-          <motion.button
+          <Button
+            onClick={() => navigate('/')}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            onClick={() => navigate('/')}
             className="w-full px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors font-medium"
           >
             Go Home
-          </motion.button>
+          </Button>
           
-          <motion.button
+          <Button
+            onClick={() => navigate(-1)}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            onClick={() => navigate(-1)}
             className="w-full px-6 py-3 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors font-medium"
           >
             Go Back
-          </motion.button>
+          </Button>
         </div>
-      </motion.div>
+      </Card>
     </div>
   );
 }

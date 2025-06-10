@@ -1,8 +1,11 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
-import ApperIcon from './ApperIcon';
-import { progressService, rewardService } from '../services';
+import ApperIcon from '@/components/ApperIcon';
+import Card from '@/components/molecules/Card';
+import ProgressStatCard from '@/components/molecules/ProgressStatCard';
+import ActionTile from '@/components/molecules/ActionTile';
+import { progressService, rewardService } from '@/services';
 
 export default function MainFeature() {
   const [progress, setProgress] = useState(null);
@@ -42,7 +45,7 @@ export default function MainFeature() {
 
   if (loading) {
     return (
-      <div className="bg-white rounded-2xl shadow-3d p-8">
+      <Card className="p-8">
         <div className="animate-pulse space-y-6">
           <div className="h-6 bg-gray-200 rounded w-1/3"></div>
           <div className="grid grid-cols-3 gap-4">
@@ -51,16 +54,16 @@ export default function MainFeature() {
             <div className="h-16 bg-gray-200 rounded"></div>
           </div>
         </div>
-      </div>
+      </Card>
     );
   }
 
   return (
-    <motion.div
+    <Card
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.4 }}
-      className="bg-white rounded-2xl shadow-3d overflow-hidden"
+      className="overflow-hidden"
     >
       {/* Header */}
       <div className="bg-gradient-to-r from-primary via-secondary to-accent p-6 text-white">
@@ -71,45 +74,35 @@ export default function MainFeature() {
       {/* Stats Grid */}
       <div className="p-6">
         <div className="grid grid-cols-3 md:grid-cols-5 gap-4 mb-8">
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            className="text-center p-4 bg-primary/5 rounded-xl"
-          >
-            <div className="text-2xl font-bold text-primary mb-1">{progress?.lessonsCompleted || 0}</div>
-            <div className="text-sm text-gray-600">Lessons</div>
-          </motion.div>
+          <ProgressStatCard 
+            value={progress?.lessonsCompleted || 0} 
+            label="Lessons" 
+            colorClass="bg-primary/5" 
+          />
           
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            className="text-center p-4 bg-secondary/5 rounded-xl"
-          >
-            <div className="text-2xl font-bold text-secondary mb-1">{progress?.mathLevel || 0}</div>
-            <div className="text-sm text-gray-600">Math Level</div>
-          </motion.div>
+          <ProgressStatCard 
+            value={progress?.mathLevel || 0} 
+            label="Math Level" 
+            colorClass="bg-secondary/5" 
+          />
           
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            className="text-center p-4 bg-accent/5 rounded-xl"
-          >
-            <div className="text-2xl font-bold text-accent mb-1">{progress?.readingLevel || 0}</div>
-            <div className="text-sm text-gray-600">Reading Level</div>
-          </motion.div>
+          <ProgressStatCard 
+            value={progress?.readingLevel || 0} 
+            label="Reading Level" 
+            colorClass="bg-accent/5" 
+          />
           
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            className="text-center p-4 bg-success/5 rounded-xl"
-          >
-            <div className="text-2xl font-bold text-success mb-1">{progress?.streakDays || 0}</div>
-            <div className="text-sm text-gray-600">Day Streak</div>
-          </motion.div>
+          <ProgressStatCard 
+            value={progress?.streakDays || 0} 
+            label="Day Streak" 
+            colorClass="bg-success/5" 
+          />
           
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            className="text-center p-4 bg-info/5 rounded-xl"
-          >
-            <div className="text-2xl font-bold text-info mb-1">{progress?.totalScore || 0}</div>
-            <div className="text-sm text-gray-600">Total Score</div>
-          </motion.div>
+          <ProgressStatCard 
+            value={progress?.totalScore || 0} 
+            label="Total Score" 
+            colorClass="bg-info/5" 
+          />
         </div>
 
         {/* Recent Rewards */}
@@ -136,33 +129,33 @@ export default function MainFeature() {
 
         {/* Quick Actions */}
         <div className="grid md:grid-cols-2 gap-4">
-          <motion.button
-            whileHover={{ scale: 1.02, y: -2 }}
-            whileTap={{ scale: 0.98 }}
+          <ActionTile
             onClick={() => navigate('/math')}
+            icon="Calculator"
+            label="Continue Math"
+            iconColor="text-white" // Custom color for the action tile bg
             className="flex items-center space-x-3 p-4 bg-gradient-to-r from-primary to-pink-500 text-white rounded-xl shadow-lg hover:shadow-hover transition-all"
           >
-            <ApperIcon name="Calculator" size={24} />
             <div className="text-left">
               <div className="font-semibold">Continue Math</div>
               <div className="text-white/80 text-sm">Practice numbers and counting</div>
             </div>
-          </motion.button>
+          </ActionTile>
           
-          <motion.button
-            whileHover={{ scale: 1.02, y: -2 }}
-            whileTap={{ scale: 0.98 }}
+          <ActionTile
             onClick={() => navigate('/reading')}
+            icon="BookOpen"
+            label="Continue Reading"
+            iconColor="text-white" // Custom color for the action tile bg
             className="flex items-center space-x-3 p-4 bg-gradient-to-r from-secondary to-green-500 text-white rounded-xl shadow-lg hover:shadow-hover transition-all"
           >
-            <ApperIcon name="BookOpen" size={24} />
             <div className="text-left">
               <div className="font-semibold">Continue Reading</div>
               <div className="text-white/80 text-sm">Discover new words and stories</div>
             </div>
-          </motion.button>
+          </ActionTile>
         </div>
       </div>
-    </motion.div>
+    </Card>
   );
 }
