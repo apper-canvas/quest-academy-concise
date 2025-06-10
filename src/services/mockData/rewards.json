@@ -1,0 +1,37 @@
+[
+  {
+    "id": "reward-1",
+    "type": "badge",
+    "name": "First Steps",
+    "icon": "Star",
+    "unlockedAt": "2024-01-15T10:30:00Z"
+  },
+  {
+    "id": "reward-2",
+    "type": "achievement",
+    "name": "Math Explorer",
+    "icon": "Calculator",
+    "unlockedAt": "2024-01-16T14:20:00Z"
+  },
+  {
+    "id": "reward-3",
+    "type": "badge",
+    "name": "Reading Hero",
+    "icon": "BookOpen",
+    "unlockedAt": "2024-01-17T09:15:00Z"
+  },
+  {
+    "id": "reward-4",
+    "type": "milestone",
+    "name": "Five Lessons Complete",
+    "icon": "Trophy",
+    "unlockedAt": "2024-01-18T16:45:00Z"
+  },
+  {
+    "id": "reward-5",
+    "type": "badge",
+    "name": "Perfect Score",
+    "icon": "Target",
+    "unlockedAt": "2024-01-19T11:30:00Z"
+  }
+]

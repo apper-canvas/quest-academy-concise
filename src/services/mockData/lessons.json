@@ -1,0 +1,200 @@
+[
+  {
+    "id": "math-1",
+    "subject": "math",
+    "title": "Counting Adventures",
+    "description": "Learn to count from 1 to 10 with fun animal friends!",
+    "difficulty": 1,
+    "type": "counting",
+    "completed": false,
+    "score": 0,
+    "content": {
+      "questions": [
+        {
+          "question": "How many cats do you see?",
+          "image": "Cat",
+          "options": ["2", "3", "4", "5"],
+          "correctAnswer": "3",
+          "explanation": "Count the cats carefully - there are 3 adorable cats!"
+        },
+        {
+          "question": "What comes after the number 5?",
+          "options": ["4", "6", "7", "8"],
+          "correctAnswer": "6",
+          "explanation": "When counting up, 6 comes right after 5!"
+        },
+        {
+          "question": "How many fingers are on one hand?",
+          "options": ["3", "4", "5", "6"],
+          "correctAnswer": "5",
+          "explanation": "Each hand has 5 fingers - count them!"
+        }
+      ]
+    }
+  },
+  {
+    "id": "math-2",
+    "subject": "math",
+    "title": "Simple Addition",
+    "description": "Add numbers together using colorful blocks and toys!",
+    "difficulty": 1,
+    "type": "addition",
+    "completed": false,
+    "score": 0,
+    "content": {
+      "questions": [
+        {
+          "question": "What is 2 + 1?",
+          "image": "Plus",
+          "options": ["2", "3", "4", "5"],
+          "correctAnswer": "3",
+          "explanation": "When you add 2 + 1, you get 3!"
+        },
+        {
+          "question": "What is 1 + 1?",
+          "options": ["1", "2", "3", "4"],
+          "correctAnswer": "2",
+          "explanation": "1 plus 1 equals 2!"
+        },
+        {
+          "question": "What is 3 + 2?",
+          "options": ["4", "5", "6", "7"],
+          "correctAnswer": "5",
+          "explanation": "3 + 2 = 5. Great job!"
+        }
+      ]
+    }
+  },
+  {
+    "id": "math-3",
+    "subject": "math",
+    "title": "Fun Subtraction",
+    "description": "Learn to subtract by taking away objects in fun scenarios!",
+    "difficulty": 2,
+    "type": "subtraction",
+    "completed": false,
+    "score": 0,
+    "content": {
+      "questions": [
+        {
+          "question": "If you have 5 apples and eat 2, how many are left?",
+          "image": "Apple",
+          "options": ["2", "3", "4", "5"],
+          "correctAnswer": "3",
+          "explanation": "5 - 2 = 3. You have 3 apples left!"
+        },
+        {
+          "question": "What is 4 - 1?",
+          "options": ["2", "3", "4", "5"],
+          "correctAnswer": "3",
+          "explanation": "4 minus 1 equals 3!"
+        },
+        {
+          "question": "What is 6 - 3?",
+          "options": ["2", "3", "4", "5"],
+          "correctAnswer": "3",
+          "explanation": "6 - 3 = 3. Excellent work!"
+        }
+      ]
+    }
+  },
+  {
+    "id": "reading-1",
+    "subject": "reading",
+    "title": "Letter Sounds",
+    "description": "Learn the sounds that letters make with fun phonics games!",
+    "difficulty": 1,
+    "type": "phonics",
+    "completed": false,
+    "score": 0,
+    "content": {
+      "questions": [
+        {
+          "question": "What sound does the letter 'A' make?",
+          "image": "Volume2",
+          "options": ["Ah", "Buh", "Kuh", "Duh"],
+          "correctAnswer": "Ah",
+          "explanation": "The letter A makes the 'Ah' sound, like in 'apple'!"
+        },
+        {
+          "question": "Which letter makes the 'Muh' sound?",
+          "options": ["B", "M", "N", "P"],
+          "correctAnswer": "M",
+          "explanation": "The letter M makes the 'Muh' sound, like in 'mouse'!"
+        },
+        {
+          "question": "What sound does 'S' make?",
+          "options": ["Sss", "Tuh", "Puh", "Ruh"],
+          "correctAnswer": "Sss",
+          "explanation": "The letter S makes the 'Sss' sound, like a snake!"
+        }
+      ]
+    }
+  },
+  {
+    "id": "reading-2",
+    "subject": "reading",
+    "title": "Sight Words Fun",
+    "description": "Practice reading common sight words that appear in stories!",
+    "difficulty": 1,
+    "type": "sight-words",
+    "completed": false,
+    "score": 0,
+    "content": {
+      "questions": [
+        {
+          "question": "Which word says 'THE'?",
+          "image": "Eye",
+          "options": ["TEH", "THE", "HET", "EHT"],
+          "correctAnswer": "THE",
+          "explanation": "THE is spelled T-H-E. It's one of the most common words!"
+        },
+        {
+          "question": "Can you find the word 'AND'?",
+          "options": ["DNA", "AND", "NAD", "ADN"],
+          "correctAnswer": "AND",
+          "explanation": "AND is spelled A-N-D. Great reading!"
+        },
+        {
+          "question": "Which one says 'YOU'?",
+          "options": ["UOY", "OYU", "YOU", "YUO"],
+          "correctAnswer": "YOU",
+          "explanation": "YOU is spelled Y-O-U. Perfect!"
+        }
+      ]
+    }
+  },
+  {
+    "id": "reading-3",
+    "subject": "reading",
+    "title": "Story Time",
+    "description": "Read a simple story and answer questions about what happened!",
+    "difficulty": 2,
+    "type": "comprehension",
+    "completed": false,
+    "score": 0,
+    "content": {
+      "questions": [
+        {
+          "question": "In the story about the red ball, where did Tom find it?",
+          "image": "Brain",
+          "options": ["Under the bed", "In the yard", "On the table", "In the box"],
+          "correctAnswer": "In the yard",
+          "explanation": "Tom found the red ball in the yard. Good memory!"
+        },
+        {
+          "question": "What color was the cat in our story?",
+          "options": ["Black", "White", "Orange", "Gray"],
+          "correctAnswer": "Orange",
+          "explanation": "The cat was orange. You're paying attention!"
+        },
+        {
+          "question": "How many dogs were playing in the park?",
+          "options": ["One", "Two", "Three", "Four"],
+          "correctAnswer": "Two",
+          "explanation": "There were two dogs playing in the park!"
+        }
+      ]
+    }
+  }
+]
